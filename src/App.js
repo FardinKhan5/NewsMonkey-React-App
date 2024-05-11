@@ -17,7 +17,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route exact path='/' element={<> <LoadingBar height={3} progress={this.state.progress} /> <Navbar title="NewsMonkey" /><NewsItem newsApi={this.state.newsApi} category="general" setProgress={this.setProgress} key="home" /></>} />
           <Route exact path='/general' element={<> <LoadingBar height={3} progress={this.state.progress} /> <Navbar title="NewsMonkey" /><NewsItem newsApi={this.state.newsApi} category="general" setProgress={this.setProgress} key="general" /></>} />
